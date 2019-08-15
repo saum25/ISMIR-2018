@@ -69,5 +69,6 @@ python invert.py jamendo_augment.npz models/jamendo_augment_gen_conv2_a15.npz ..
 
 python invert.py jamendo_augment.npz models/jamendo_augment_gen_conv1_a1.npz ../Deep_inversion ./results --layer 'conv1' --n_conv_layers 1 --n_conv_filters 64
 
+5. In Fig. 6 from the paper, in order to reproduce the results for the A and B examples, set time_index=1.4285 and 33. 
 
 
