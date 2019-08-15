@@ -71,14 +71,4 @@ python invert.py jamendo_augment.npz models/jamendo_augment_gen_conv1_a1.npz ../
 
 5. In Fig. 6 from the paper, in order to reproduce the results for the A and B examples, set time_index=1.4285 and 33. 
 
-In case you use this code, please cite our work.
-
-@inproceedings{Mishra_ismir_2018,
-	Address = {Paris, France},
-	Author = {Saumitra Mishra and Bob L. Sturm and Simon Dixon},
-	Booktitle = {Proceedings of the 19th International Society for Music Information Retrieval Conference (ISMIR)},
-	Month = {September},
-	Pages = {755-762},
-	Title = {{Understanding a Deep Machine Listening Model Through Feature Inversion}},
-	Year = {2018}}
 In case of any issues, please contact at saumitra.mishra@qmul.ac.uk
