@@ -1,8 +1,8 @@
 # ISMIR-2018
 
-This repository contains the source code and experimental results for our ISMIR paper, "Understanding a Deep Machine Listening Model Through Feature Inversion".
+This repository contains the source code for reproducing the results of our ISMIR paper, "Understanding a Deep Machine Listening Model Through Feature Inversion". Key points about this repository are highlighted below.
 
-1. Code to invert a feature at any later of SVDNet (SVD model from Jan Schlueter, ISMIR 2015).
+1. Code to invert a feature at any later of SVDNet (SVD model from Jan Schlueter et al., ISMIR 2015).
 
 2. Inputs to the code for performing feature inversion
 
@@ -14,7 +14,7 @@ This repository contains the source code and experimental results for our ISMIR 
 
 	d) results_directory - to save output plots
 
-	e) layer - to indicate features from which layer are to be inverted. default is fc8.
+	e) layer - to invert features from this layer
 
 	f) n_conv_layers, n_conv_filters - these two arguments need to be provided for inverting conv5 and other lower layers.
 
@@ -22,11 +22,11 @@ This repository contains the source code and experimental results for our ISMIR 
 
 3. To invert a feature from an input, the current code works as mentioned below. Depending on the need it may be changed.
 
-	a) create a list of mel spectrograms, one per audio file.
+	a) create a list of mel spectrograms, one per audio file. e.g., Jamendo test dataset has 16 audio files, so the list of mel spects will have 16 elements.
 
-	b) Then for each audio file, select an excerpt whose features are to be inverted. Currently, an excerpt per audio file between 10 sec - 20 sec of audio selected.
+	b) Then for each audio file, select an excerpt whose features are to be inverted. Currently, an excerpt per audio file between 10 sec - 20 sec of audio selected. We can change it depending on the usecase.
 
-	c) There is one redundancy in the code. The number of inputs to all the lasagne functions must be of batch size = 32 size. This happens due to the way the inverters are trained. So, although we feed 32 excerpts, we only care for the first excerpt in a file when we plot the results.
+	c) The number of inputs to all the lasagne functions must be of batch size = 32 size. This happens due to the way the inverters are trained. So, although we feed 32 excerpts, we only care for the first excerpt in a file when we plot the results.
 
 4. commands to invert features from each layer are mentioned below.
 
